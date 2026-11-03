@@ -16,3 +16,9 @@ EGM2008_WGS84 1x1 minutes grid interpolator (interp_1min.f) is a program for a g
 This dataset is licensed by the rights-holder under a Creative Commons Attribution 4.0 International Licence: https://creativecommons.org/licenses/by/4.0/.
 
 Host: University of Tartu, Estonia
+
+Additional information
+Kalev Rannat kalev.rannat@ut.ee
+Hannes Keernik hannes.keernik@ut.ee
+
+This work is funded by the ECMWF, Service contract No ECMWF/COPERNICUS/2025/C3S2_311_Bis_MU .
