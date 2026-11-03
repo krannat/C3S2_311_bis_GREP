@@ -14,3 +14,5 @@ The packages needed to run the GREP are listed in the requirements.txt .
 EGM2008_WGS84 1x1 minutes grid interpolator (interp_1min.f) is a program for a global grid of regularly spaced point values to selected scattered coordinates. The executable must be compiled from source interp_1min.f into /EGM2008_WGS84 . The ca 1 GB grid-file must be decompressed and installed to the same directory. After compilation, run a test by comparing the sample file INPUT.DAT and OUTPUT.DAT. For running grep, the user must make changes to config.py according to the installation instructions given in SD document. 
 
 This dataset is licensed by the rights-holder under a Creative Commons Attribution 4.0 International Licence: https://creativecommons.org/licenses/by/4.0/.
+
+Host: University of Tartu, Estonia
