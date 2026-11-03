@@ -70,7 +70,7 @@ greenland_rinex2_url = f'{greenland_main_url}RINEX2/GRL/'
 greenland_rinex3_url = f'{greenland_main_url}RINEX3/GRL/'
 greenland_logfiles_url = f'{greenland_main_url}SITELOGS/'
 
-known_hosts = '/home/kr/.ssh/known_hosts'  # path to your known hosts file
+known_hosts = '/home/grep_user/.ssh/known_hosts'  # path to your known hosts file
 
 # For GEOID MODEL
 egm_path = '/home/kr/EGM2008_WGS84/'  # geoid model EGM2008
