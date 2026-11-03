@@ -73,7 +73,7 @@ greenland_logfiles_url = f'{greenland_main_url}SITELOGS/'
 known_hosts = '/home/grep_user/.ssh/known_hosts'  # path to your known hosts file
 
 # For GEOID MODEL
-egm_path = '/home/kr/EGM2008_WGS84/'  # geoid model EGM2008
+egm_path = '/home/grep_user/EGM2008_WGS84/'  # geoid model EGM2008
 
 # For CHILE
 chile_rinex_url = 'https://gps.csn.uchile.cl/data/'
