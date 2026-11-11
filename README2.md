@@ -1,4 +1,4 @@
-# **GNSS Global Repository (GREP) Software with Documentation (SD)**
+# **GNSS Global Repository (GREP) Software**
 
 > **Issued by**: University of Tartu / <span class="mark">Kalev
 > Rannat</span>
@@ -87,87 +87,16 @@ time-outs or any unexpected processing errors detected.
 
 # Software archival location
 
-<span class="mark">Provide a link and access details for the archive of
-the software used including the README file. This should be on Github or
-similar public-access code repository.</span>
-
-<span class="mark">Include as a figure a screencap of the start of the
-file listing of the software instance being described.</span>
-
-<span class="mark">Include as a figure a screencap of the README file
-first few lines.</span>
-
-<span class="mark">Default is an open-access repository. If username or
-password are required to access, provide contact details as to how to
-request access.</span>
-
-<span class="mark">If the software license is not explicitly indicated
-within the software repository, then this license must be indicated
-here.</span>
-
 The GREP repository can be found at URL:
 <https://github.com/krannat/C3S2_311_bis_GREP> .
 
 <u>GREP (modular) Structure:</u>
 
-Scripts:
-
-/grep/
-
-├── compare comparing RINEX headers with logfiles
-
-├── dbio internal data management
-
-├── download download from different remote repositories
-
-├── log logging support
-
-├── process remote-specific data processing
-
-├── run the main run script
-
-└── t_box supporting scripts for monitoring and maintenance
+<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Fig1.png" />
 
 Data and processing outputs:
 
-grep_data
-
-├── brdc daily ephemeris files
-
-├── df_backups dataframe backups
-
-├── logfiles sites’ logfiles
-
-├── logfiles_err
-
-├── logging operative daily logfiles
-
-├── pickles dataframes
-
-├── RINEX QC-passed RINEXes by Year (YYYY) and Day of the Year (DOY)
-
-│   └── YYYY
-
-│   └── DOY
-
-├── RINEX_err QC NOT passed RINEXes by Year (YYYY) and Day of the Year
-(DOY)
-
-│   └── YYYY
-
-│   └── DOY
-
-├── RINEX_v1 RINEX v1
-
-│   └── YYYY
-
-│   └── DOY
-
-├── stns stations’ table
-
-├── tmp temporary processing info
-
-└── unavco_tokens EartScope Tokens
+<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Fig2.png" />
 
 3<sup>rd</sup> parties’ software (licences described in DL-deliverable):
 
@@ -461,9 +390,9 @@ necessary.
   changes in data transmission protocols) made in any of the remote
   servers.
 
-- In one session the GREP can process maximum one year of data.
+- In one session the GREP can process maximum one year of data. It is left so for practical reasons. The processing may last long – days, weeks, months, depending on a number of networks and the interval of days chosen. It does not make sense to process long time intervals without checking the logfiles, for being sure that everything was processed correctly.
 
-- Data download from NCN and Geoscience Australia relies on Amazon AWS
+- Data download from NCN and Geoscience Australia relies on Amazon AWS. It is a critical dependency. GREP can use alternative solutions, but without AWS service the data download speed drops down radically and the connections to the remotes may get unstable.   
 
 # Testing
 
@@ -569,7 +498,7 @@ grep -E '\\.(crx\|rnx)'
 \$B/RINEX/2025/001/comparing_log_rinex_2025_001.txt \| awk -F'\|'
 '{print (\$4==""?"no logfile":\$4)}' \| sort \| uniq -c \| sort -rn
 
-<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_15.png" style="width:2.57472in;height:1.04583in" />
+<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_15.png" style="width:1.57472in;height:1.04583in" />
 
 <u>16. Check the processing logs for error messages. Number of messages
 per type for DOY 001:</u>
