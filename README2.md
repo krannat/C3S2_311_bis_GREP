@@ -91,7 +91,7 @@ The GREP repository can be found at URL:
 <https://github.com/krannat/C3S2_311_bis_GREP> .
 
 <u>GREP (modular) Structure:</u>
-
+ 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Fig1.png" />
 
 Data and processing outputs:
