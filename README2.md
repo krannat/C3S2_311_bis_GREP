@@ -25,20 +25,16 @@ of this document, which is merely representing the author’s view.
 | CACS | Canadian Active Control System |
 | C3S | The Copernicus Climate Change Service |
 | CDDIS | The Crustal Dynamics Data Information System |
-| CORS | Continuously Operating Reference Station |
 | CSV | Comma Separated Values |
 | ECMWF | The European Centre for Medium-Range Weather Forecasts |
-| EPN | EUREF Permanent GNSS Network |
+| EPN | European Reference Frame Permanent GNSS Network |
 | EUREF | European Reference Frame |
 | GNSS | Global Navigation Satellite System |
 | GREP | Global RINEX Data Repository |
-| IGS | International GNSS Service |
 | NCN | (NOAA) Continuously Operating Reference Station (CORS) Network |
 | NOAA | National Oceanic and Atmospheric Administration |
 | RINEX | Receiver INdependent EXchange (RINEX) files are the industry standard for GNSS data |
-| SIRGAS | Geodetic Reference System for the Americas |
 | URL | Uniform Resource Locator, a unique identifier used to locate a resource on the Internet |
-| UTARTU | University of Tartu |
 
 # Introduction 
 
@@ -497,13 +493,22 @@ awk '{print \$3}' \$B/RINEX/2025/001/daily_errors.log \| sort \| uniq -c
 
 # Verification
 
-<span class="mark">Provide a snapshot of successful installation of the
-software on a third-party machine including verification against the
-tests described in Section 5. If exceptionally this is not possible
-(e.g. requires install on a second supercomputing facility and no access
-rights to do so) then state clearly as an exception.</span>
-
 To ensure, that everything is installed and works appropriately, it is
 suggested to contact the developers for running a test-set of networks
 and a fixed number of consecutive days on a platform independent of a
 new user. The results and logfiles can be compared after the test-run.
+
+# Support and Contact
+
+### Reporting Issues
+
+To report bugs, please contact the development team or open an issue in the repository.
+
+### Contributing
+
+Contributions are welcome. Please ensure tests pass before submitting changes.
+
+**Maintainer(s):**
+
+- Kalev Rannat
+- Hannes Keernik
