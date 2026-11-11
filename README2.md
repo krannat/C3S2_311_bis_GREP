@@ -1,17 +1,5 @@
 # **GNSS Global Repository (GREP) Software**
 
-> **Issued by**: University of Tartu / <span class="mark">Kalev
-> Rannat</span>
->
-> **Date:** 11/11/2026
->
-> **Ref:**
-> D311_bis_2.8.2_GREP_DL_2026_GNSS_Global_Repository\_(GREP)\_Software_with_Documentation
-> \_(SD)
->
-> **Official reference number service contract:**
-> ECMWF/COPERNICUS/2025/C3S2_311_bis_MU
-
 This document has been produced in the context of the Copernicus Climate
 Change Service (C3S).\
 The activities leading to these results have been contracted by the
