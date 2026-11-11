@@ -224,7 +224,7 @@ Python client for geocoding web service Nominatim. The use policy:
 <https://operations.osmfoundation.org/policies/nominatim/>
 
 The interp_1min for EGM2008: executable must be compiled from source
-interp_1min.f into /EGM2008_WGS84 (the grid-file must be installed to
+interp_1min.f into /EGM2008_WGS84 (the grid-file https://drive.google.com/file/d/1DbOlgpLgq1YRs8iJ9e3wnmH_Yd4BKHIZ/view?usp=drive_link must be installed to
 the same directory). Just copying executable from one file system to the
 next may not work. After compilation run a test by comparing the sample
 file INPUT.DAT and OUTPUT.DAT (given in GitHub).
