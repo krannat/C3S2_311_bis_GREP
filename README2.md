@@ -519,9 +519,3 @@ To ensure, that everything is installed and works appropriately, it is
 suggested to contact the developers for running a test-set of networks
 and a fixed number of consecutive days on a platform independent of a
 new user. The results and logfiles can be compared after the test-run.
-
-ECMWF – **Robert-Schuman-Platz 3, 53175 Bonn, Germany**
-
-Contact: <https://support.ecmwf.int/>
-
-climate.copernicus.eu copernicus.eu ecmwf.int
