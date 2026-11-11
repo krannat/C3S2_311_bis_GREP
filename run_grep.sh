@@ -26,7 +26,7 @@ datestr=$(date +"%Y%m%d")
 echo "$(date)"
 echo Starting year $1 from $2 to $3
 
-
+ 
 logfile="/my_path_to_nohup_output/nohup_out_${datestr}.log"
 nohup python3 -c "from run.daily_routines import main; main($1, $2, $3)" > "$logfile" 2>&1 &
 
