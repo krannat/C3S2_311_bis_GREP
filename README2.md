@@ -488,7 +488,7 @@ B=/path/to/data/folder; T/path/to/test/notes; mkdir -p \$T; cd
 
 grep -n "^network_list\\\|^BASE_PATH\\\|^pkl_path" config.py
 
-<img src="media/image6.png" style="width:3.75575in;height:0.52941in" />
+<img src="G:\C3S2_311_bis\WP2_Deliverables\SD_pictures\Testing_2.png" style="width:3.75575in;height:0.52941in" />
 
 <u>3. Save a timestamp and a copy of the station table:</u>
 
