@@ -415,7 +415,7 @@ echo "logfiles: \$(ls \$B/logfiles \| wc -l)"; echo "RINEX/2025/001:
 \$(ls \$B/RINEX/2025/001/\* 2\>/dev/null \| wc -l)"; } \| tee
 \$T/before.txt
 
-<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_4.png" style="width:1.29888in;height:0.37963in" />
+<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_4.png" />
 
 <u>5. Run the test for 2025, doy of year 001:</u>
 
@@ -482,14 +482,14 @@ grep -E '\\.(crx\|rnx)'
 \$B/RINEX/2025/001/comparing_log_rinex_2025_001.txt \| awk -F'\|'
 '{print (\$4==""?"no logfile":\$4)}' \| sort \| uniq -c \| sort -rn
 
-<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_15.png" style="width:1.57472in;height:1.04583in" />
+<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_15.png" />
 
 <u>16. Check the processing logs for error messages. Number of messages
 per type for DOY 001:</u>
 
 awk '{print \$3}' \$B/RINEX/2025/001/daily_errors.log \| sort \| uniq -c
 
-<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_16.png" style="width:4.36154in;height:0.36974in" />
+<img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_16.png" style="width:3.75575in;height:0.52941in" />
 
 # Verification
 
