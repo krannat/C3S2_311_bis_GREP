@@ -398,28 +398,28 @@ B=/path/to/data/folder; T/path/to/test/notes; mkdir -p \$T; cd
 /path/to/grep/scripts
 
 <u>2. To show the test configuration:</u>
-
-grep -n "^network_list\\\|^BASE_PATH\\\|^pkl_path" config.py
+```bash
+grep -n "^network_list\|^BASE_PATH\|^pkl_path" config.py
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_2.png" style="width:3.75575in;height:0.52941in" />
 
 <u>3. Save a timestamp and a copy of the station table:</u>
-
-touch \$T/start_marker; cp \$B/stns/stn_table.csv
-\$T/stn_table_before.csv
+```bash
+touch $T/start_marker; cp $B/stns/stn_table.csv $T/stn_table_before.csv
+```
 
 <u>4. Count what exists now and save it to before.txt</u>
-
-{ echo "stn_table rows: \$((\$(wc -l \< \$B/stns/stn_table.csv)-1))";
-echo "logfiles: \$(ls \$B/logfiles \| wc -l)"; echo "RINEX/2025/001:
-\$(ls \$B/RINEX/2025/001/\* 2\>/dev/null \| wc -l)"; } \| tee
-\$T/before.txt
+```bash
+{ echo "stn_table rows: $(($(wc -l < $B/stns/stn_table.csv)-1))"; echo "logfiles: $(ls $B/logfiles | wc -l)"; echo "RINEX/2025/001: $(ls $B/RINEX/2025/001/* 2>/dev/null | wc -l)"; } | tee $T/before.txt
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_4.png" />
 
 <u>5. Run the test for 2025, doy of year 001:</u>
-
+```bash
 grep.sh 2025 1 1
+```
 
 6\. After the run use the same count command as Step 4, but it saves to
 after.txt:
@@ -427,70 +427,70 @@ after.txt:
 { echo "stn_table rows: $(($(wc -l < $B/stns/stn_table.csv)-1))"; echo "logfiles: $(ls $B/logfiles | wc -l)"; echo "RINEX/2025/001: $(ls $B/RINEX/2025/001/* 2>/dev/null | wc -l)"; } | tee $T/after.txt
 ```
 
-\{ echo "stn_table rows: \$\(\(\$\(wc \-l \< \$B/stns/stn\_table\.csv)\-1\)\)";
-echo "logfiles: \$(ls \$B/logfiles \| wc \-l\)"; echo "RINEX/2025/001:
-\$(ls \$B/RINEX/2025/001/\* 2\>/dev/null \| wc \-l)"; \} \| tee
-\$T/after\.txt
-
 <u>7. Show before and after side by side</u>
-
-diff -y \$T/before.txt \$T/after.txt
+```bash
+diff -y $T/before.txt $T/after.txt
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_7.png" style="width:5.14901in;height:0.49537in" />
 
 <u>8. Rows added or changed in stn_table.csv:</u>
-
-diff \$T/stn_table_before.csv \$B/stns/stn_table.csv \| grep '^\[\<\>\]'
+```bash
+diff $T/stn_table_before.csv $B/stns/stn_table.csv | grep '^[<>]'
+```
 
 <u>9. Stations that needed a Nominatim query:</u>
-
-grep -h "Making a Nominatim query" \$B/RINEX/2025/001/daily.log
+```bash
+grep -h "Making a Nominatim query" $B/RINEX/2025/001/daily.log
+```
 
 <u>10. Number of new logfiles:</u>
-
-find \$B/logfiles -type f -newer \$T/start_marker \| wc -l
+```bash
+find $B/logfiles -type f -newer $T/start_marker | wc -l
+```
 
 <u>11. The first 5 of new logfiles:</u>
-
-find \$B/logfiles -type f -newer \$T/start_marker \| head -5
+```bash
+find $B/logfiles -type f -newer $T/start_marker | head -5
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_11.png" style="width:3.67593in;height:0.74594in" />
 
 <u>12. Check if some RINEX files were rejected (if yes then inspect
 daily_errors.log):</u>
-
-ls \$B/RINEX_err/2025/001 2\>/dev/null \|\| echo "No RINEX_err/2025/001
-folder -\> no RINEX files rejected"
+```bash
+ls $B/RINEX_err/2025/001 2>/dev/null || echo "No RINEX_err/2025/001 folder -> no RINEX files rejected"
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_12.png" style="width:6.51852in;height:0.25725in" />
 
 <u>13. Check the content of the dataframe (output table), rows per day
 (YYYYDOY):</u>
-
-cut -d, -f2 \$B/df_backups/2025/2025_01.csv \| tail -n +2 \| cut -c13-19
-\| sort \| uniq -c
+```bash
+cut -d, -f2 $B/df_backups/2025/2025_01.csv | tail -n +2 | cut -c13-19 | sort | uniq -c
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_13.png" style="width:5.40278in;height:0.25741in" />
 
 <u>14. A sample of the content (site, RINEX file, matched logfile):</u>
-
-grep 2025001 \$B/df_backups/2025/2025_01.csv \| head -10 \| cut -d,
--f1,2,6
+```bash
+grep 2025001 $B/df_backups/2025/2025_01.csv | head -10 | cut -d, -f1,2,6
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_14.png" style="width:4.18877in;height:1.24537in" />
 
 <u>15. Number of sites per error code (0 = consistent):</u>
-
-grep -E '\\.(crx\|rnx)'
-\$B/RINEX/2025/001/comparing_log_rinex_2025_001.txt \| awk -F'\|'
-'{print (\$4==""?"no logfile":\$4)}' \| sort \| uniq -c \| sort -rn
+```bash
+grep -E '\.(crx|rnx)' $B/RINEX/2025/001/comparing_log_rinex_2025_001.txt | awk -F'|' '{print ($4==""?"no logfile":$4)}' | sort | uniq -c | sort -rn
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_15.png" />
 
 <u>16. Check the processing logs for error messages. Number of messages
 per type for DOY 001:</u>
-
-awk '{print \$3}' \$B/RINEX/2025/001/daily_errors.log \| sort \| uniq -c
+```bash
+awk '{print $3}' $B/RINEX/2025/001/daily_errors.log | sort | uniq -c
+```
 
 <img src="https://github.com/krannat/C3S2_311_bis_GREP/blob/main/SD_pictures/Testing_16.png" style="width:3.75575in;height:0.52941in" />
 
