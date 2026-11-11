@@ -1,9 +1,9 @@
-**GNSS Global Repository (GREP) Software with Documentation (SD)**
+# **GNSS Global Repository (GREP) Software with Documentation (SD)**
 
 > **Issued by**: University of Tartu / <span class="mark">Kalev
 > Rannat</span>
 >
-> **Date:** DD/MM/YYYY
+> **Date:** 11/11/2026
 >
 > **Ref:**
 > D311_bis_2.8.2_GREP_DL_2026_GNSS_Global_Repository\_(GREP)\_Software_with_Documentation
@@ -26,56 +26,6 @@ For the avoidance of all doubt, the European Commission and the European
 Centre for Medium-Range Weather Forecasts have no liability in respect
 of this document, which is merely representing the author’s view.
 
-> Contributors
->
-> **UNIVERSITY OF TARTU**
->
-> Kalev Rannat
->
-> Hannes Keernik
->
-> **MAYNOOTH UNIVERSITY**
->
-> Peter Thorne
->
-> Corinne Voces
->
-> **UNIVERSITY OF SALERNO**
->
-> Fabio Madonna
-
-Change Log
-
-| Version | Date | Description |
-|---------|------|-------------|
-| 01      |      |             |
-| 02      |      |             |
-| 03      |      |             |
-| 04      |      |             |
-| final   |      |             |
-|         |      |             |
-|         |      |             |
-
-# Table of Contents
-
-[Acronyms [6](#_Toc244184805)](#_Toc244184805)
-
-[1. Introduction [7](#introduction)](#introduction)
-
-[2. Software archival location
-[7](#software-archival-location)](#software-archival-location)
-
-[2.1 Technical specifications
-[9](#technical-specifications)](#technical-specifications)
-
-[3. Installation instructions
-[9](#installation-instructions)](#installation-instructions)
-
-[4. Usage instructions [14](#usage-instructions)](#usage-instructions)
-
-[5. Testing [16](#testing)](#testing)
-
-[6. Verification [19](#verification)](#verification)
 
 # 
 
@@ -107,9 +57,7 @@ Change Log
 This document includes workflow explanations, expanded scientific
 background, and technical commentary on each component of the Python
 scripts used to retrieve and process the GNSS observational data and
-metadata for the Global RINEX Data Repository (GREP). GREP is a
-repository of RINEX observations combined from global, regional and
-national open-access data repositories.
+metadata for the Global RINEX Data Repository (GREP). GREP is a repository of RINEX observations merging global, regional and national data repositories, (most of them are open-access repositories). 
 
 The processing workflow performs:
 
