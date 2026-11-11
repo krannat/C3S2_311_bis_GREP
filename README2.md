@@ -423,6 +423,9 @@ grep.sh 2025 1 1
 
 6\. After the run use the same count command as Step 4, but it saves to
 after.txt:
+```bash
+{ echo "stn_table rows: $(($(wc -l < $B/stns/stn_table.csv)-1))"; echo "logfiles: $(ls $B/logfiles | wc -l)"; echo "RINEX/2025/001: $(ls $B/RINEX/2025/001/* 2>/dev/null | wc -l)"; } | tee $T/after.txt
+```
 
 \{ echo "stn_table rows: \$\(\(\$\(wc \-l \< \$B/stns/stn\_table\.csv)\-1\)\)";
 echo "logfiles: \$(ls \$B/logfiles \| wc \-l\)"; echo "RINEX/2025/001:
